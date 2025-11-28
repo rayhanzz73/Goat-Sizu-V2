@@ -4,13 +4,12 @@ const path = require('path');
 
 exports.config = {
     name: "maze",
-    author: "allou moha",//updated by NeoKEX
+    author: "SiFu",
     role: 0,
     countDown: 40,
-    description: "Play maze with adjustable difficulty.",
-    version: "1.0.3",
-    guide: "{pn} [1-10] or {pn} [easy|medium|hard]",
-    category: "game",
+    description: "play maze puzzle game",
+    version: "1.0.0",
+    guide: "{pn}"
 };
 
 function generateMazeImage(difficulty = 15, grid = null, cols = null, highlightPath = null, wrongPath = null, currentPosition = null, progressPath = null) {
@@ -355,30 +354,8 @@ function isPartialSolutionCorrect(userPath, solutionPath, fullCode) {
     return true;
 }
 
-exports.onStart = async ({ args, message, event, commandName }) => {
-    let difficultyLevel = 8;
-    let difficultyMessage = "Medium";
-
-    if (args.length > 0) {
-        const input = args[0].toLowerCase();
-        const inputNumber = parseInt(input);
-
-        if (!isNaN(inputNumber)) {
-            difficultyLevel = Math.max(1, Math.min(10, inputNumber));
-            difficultyMessage = `Level ${difficultyLevel}`;
-        } else if (input === 'easy') {
-            difficultyLevel = 4;
-            difficultyMessage = "Easy (Level 4)";
-        } else if (input === 'medium') {
-            difficultyLevel = 8;
-            difficultyMessage = "Medium (Level 8)";
-        } else if (input === 'hard') {
-            difficultyLevel = 13;
-            difficultyMessage = "Hard (Level 13)";
-        }
-    }
-
-    const data = generateMazeImage(difficultyLevel);
+exports.onStart = async ({ message, event, commandName }) => {
+    const data = generateMazeImage(8);
     
     const imagePath = path.join(__dirname, global.utils.randomString(4) + ".png");
     
@@ -388,7 +365,7 @@ exports.onStart = async ({ args, message, event, commandName }) => {
     await new Promise((resolve) => writeStream.on('finish', resolve));
 
     const reply = await message.reply({
-        body: `🧩 Solve the maze! Difficulty: ${difficultyMessage}\n\n• Send your path in one message (e.g., ➡️➡️⬇️...)\n• A is the start, B is the end.\n• You have 3 attempts for wrong answers.`,
+        body: "🧩 Solve the maze using emojis (⬆️ ➡️ ⬇️ ⬅️)\n\n• Send your path in one message (e.g., ➡️➡️⬇️...)\n• A is the start, B is the end.\n• You have 3 attempts for wrong answers.",
         attachment: fs.createReadStream(imagePath)
     });
     
@@ -403,22 +380,17 @@ exports.onStart = async ({ args, message, event, commandName }) => {
         cols: data.cols,
         attempts: 0,
         currentProgress: "",
-        currentPosition: data.grid[0],
-        // Store the final calculated difficulty level for reward scaling
-        finalDifficulty: difficultyLevel 
+        currentPosition: data.grid[0]
     });
 };
 
-exports.onReply = async ({ message, event, Reply, usersData }) => {
-    const { au, solution, solutionPath, grid, cols, currentProgress, finalDifficulty } = Reply;
+exports.onReply = async ({ message, event, Reply }) => {
+    const { au, solution, solutionPath, grid, cols, currentProgress } = Reply;
     if (event.senderID !== au) return;
 
     const userEmoji = event.body.trim();
     const userCode = trans(userEmoji);
     
-    if (!/^[urdl⬆️➡️⬇️⬅️]+$/i.test(userEmoji)) {
-        return message.reply(`Please only use valid move emojis (⬆️ ➡️ ⬇️ ⬅️) or their corresponding letters (u, r, d, l) in one sequence.`);
-    }
     if (!/^[urdl]+$/i.test(userCode)) {
         return message.reply(`Please only use valid move emojis (⬆️ ➡️ ⬇️ ⬅️) or their corresponding letters (u, r, d, l) in one sequence.`);
     }
@@ -431,41 +403,23 @@ exports.onReply = async ({ message, event, Reply, usersData }) => {
     const isCorrectContinuation = isPartialSolutionCorrect(userPath, solutionPath, fullCode);
 
     if (isCorrectContinuation && userPath.length === solutionPath.length) {
-        // Dynamic Reward Calculation: Base 20000 / 8 * finalDifficulty
-        // Minimum reward is set to 2500 (1 * 2500)
-        const baseCoinPerLevel = 2500; 
-        const rewardAmount = Math.max(2500, Math.floor(baseCoinPerLevel * (finalDifficulty || 8))); 
+        const data = generateMazeImage(15, grid, cols, solutionPath, null);
         
-        try {
-            const userData = await usersData.get(event.senderID);
-            await usersData.set(event.senderID, {
-                money: userData.money + rewardAmount,
-                exp: userData.exp,
-                data: userData.data
-            });
-            
-            const data = generateMazeImage(15, grid, cols, solutionPath, null);
-            
-            const imagePath = path.join(__dirname, global.utils.randomString(4) + ".png");
-            const writeStream = fs.createWriteStream(imagePath);
-            data.image.pipe(writeStream);
-            await new Promise((resolve) => writeStream.on('finish', resolve));
+        const imagePath = path.join(__dirname, global.utils.randomString(4) + ".png");
+        const writeStream = fs.createWriteStream(imagePath);
+        data.image.pipe(writeStream);
+        await new Promise((resolve) => writeStream.on('finish', resolve));
 
-            await message.reply({
-                body: `🎉 Correct! You solved the maze and earned $${rewardAmount.toLocaleString()}! The solution is shown in green.`,
-                attachment: fs.createReadStream(imagePath)
-            });
-            fs.unlinkSync(imagePath);
-            global.GoatBot.onReply.delete(event.messageID);
-        } catch (e) {
-             message.reply(`🎉 You solved the maze! (Error crediting money: ${e.message})`);
-             global.GoatBot.onReply.delete(event.messageID);
-        }
+        await message.reply({
+            body: "🎉 Correct! You solved the maze! The solution is shown in green.",
+            attachment: fs.createReadStream(imagePath)
+        });
+        fs.unlinkSync(imagePath);
+        global.GoatBot.onReply.delete(event.messageID);
         return;
     }
     
     if (isCorrectContinuation) {
-        // CORRECT CONTINUATION
         const currentCell = userPath[userPath.length - 1];
         Reply.currentProgress = fullCode;
         Reply.currentPosition = currentCell;
@@ -490,10 +444,8 @@ exports.onReply = async ({ message, event, Reply, usersData }) => {
         return;
     }
     
-    // WRONG PATH/MOVE
     Reply.attempts++;
     if (Reply.attempts >= 3) {
-        // GAME OVER
         const data = generateMazeImage(15, grid, cols, solutionPath, userPath);
         
         const imagePath = path.join(__dirname, global.utils.randomString(4) + ".png");
@@ -508,7 +460,7 @@ exports.onReply = async ({ message, event, Reply, usersData }) => {
         fs.unlinkSync(imagePath);
         global.GoatBot.onReply.delete(event.messageID);
     } else {
-        // WRONG MOVE, ATTEMPTS REMAINING
         await message.reply(`❌ Wrong path or move! Try again from your last checkpoint.\n\n🔄 Attempts remaining: ${3 - Reply.attempts}`);
     }
 };
+          
