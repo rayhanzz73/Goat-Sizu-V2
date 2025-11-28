@@ -26,7 +26,7 @@ module.exports = {
 				config: {
 								name: "sing",
 								version: "1.1",
-								author: "NeoKEX",//Don't change the author Name 😡
+								author: "SiFu",//Don't change the author Name 😡
 								countDown: 5,
 								role: 0,
 								description: {
