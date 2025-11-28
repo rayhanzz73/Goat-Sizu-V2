@@ -31,10 +31,10 @@ function formatBalance(num) {
 }
 
 module.exports.config = {
-  name: "balcard",
-  aliases: ["bc"],
+  name: "balance",
+  aliases: ["bal"],
   version: "1.0",
-  author: "MOHAMMAD AKASH",
+  author: "SiFu",
   countDown: 5,
   role: 0,
   shortDescription: "Bank card style balance",
