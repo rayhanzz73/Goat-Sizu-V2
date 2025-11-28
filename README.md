@@ -87,7 +87,9 @@ https://drive.google.com/file/d/1y8ZTfToAe5HoxFxdH4hH88KT01zrw_Id/view?usp=drive
 - 💎 **Premium Users** (Role 3): Money-based premium features
 - 👨‍💻 **Developers** (Role 4): Full system access with shell & eval commands
 - 🤖 **Smart Command Suggestions**: Typo detection with closest match suggestions
-- 😡 **React to Delete**: Admins/Devs can react with 😡/😠 to unsend bot messages
+- 😡 **React to Delete**: Admins/Devs/users can react with 🙂/😡/😠 to unsend bot messages
+- 🦵 **React to kick**
+  Admin can react with 🦵 to kick group member 🗿
 - ☁️ **Deploy Ready**: Pre-configured for Render, Railway & more
 - 🎨 **Clean Icons**: Replaced emoji clutter with elegant Unicode icons
 
