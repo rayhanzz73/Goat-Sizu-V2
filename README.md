@@ -12,7 +12,7 @@
     <a href="https://nodejs.org/dist/v20.0.0">
       <img src="https://img.shields.io/badge/Node.js-20.x-brightgreen.svg?style=for-the-badge&logo=node.js" alt="Node.js v20.x">
     </a>
-    <img src="https://img.shields.io/github/repo-size/ntkhang03/Goat-sizu-V2.svg?style=for-the-badge&label=size&color=blue" alt="Repo Size">
+    <img src="https://img.shields.io/github/repo-size/Ewr-sifu/Goat-Sizu-V2.svg?style=for-the-badge&label=size&color=blue" alt="Repo Size">
     <img src="https://img.shields.io/badge/dynamic/json?color=orange&label=version&prefix=v&query=%24.version&url=https://github.com/ntkhang03/Goat-Bot-V2/raw/main/package.json&style=for-the-badge" alt="Version">
     <br>
 <div align="center">
