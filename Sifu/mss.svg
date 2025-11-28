@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="90" viewBox="0 0 440 90">
+  <defs>
+    <!-- ১. মেসেঞ্জারের জন্য নতুন অ্যানিমেটেড গ্রেডিয়েন্ট -->
+    <linearGradient id="frontGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%"  stop-color="#0078FF"/> <!-- নীল -->
+      <stop offset="50%" stop-color="#7A00F7"/> <!-- বেগুনী -->
+      <stop offset="100%" stop-color="#F700C3"/> <!-- গোলাপী -->
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-1,0" to="1,0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- ২. শাইন ইফেক্ট (অপরিবর্তিত) -->
+    <linearGradient id="shine" x1="-100%" y1="0" x2="200%" y2="0">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-1,0" to="1,0" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- ৩. গ্লো ইফেক্ট (অপরিবর্তিত) -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ৪. ব্যাকগ্রাউন্ড এবং ফ্রেম (অপরিবর্তিত অ্যানিমেশন) -->
+  <rect x="8" y="8" width="424" height="74" rx="18" fill="#000"
+        stroke="url(#frontGrad)" stroke-width="3">
+    <!-- স্ট্রোকের পালস অ্যানিমেশন -->
+    <animate attributeName="stroke-width" values="3;5;3" dur="2.4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="8" y="8" width="424" height="74" rx="18" fill="url(#shine)"/>
+
+  <!-- ৫. মেসেঞ্জার লোগো -->
+  <g transform="translate(20,18)">
+    <!-- লোগোর বাবল শেপ -->
+    <g filter="url(#softGlow)">
+      <path d="M25 0 C11.2 0 0 11.2 0 25 C0 38.8 11.2 50 25 50 C29.1 50 32.9 49.1 36.3 47.5 L45 50 L42.5 41.3 C47.1 37.9 50 31.8 50 25 C50 11.2 38.8 0 25 0 Z" 
+            fill="url(#frontGrad)"/>
+    </g>
+    <!-- লোগোর ভেতরের লাইটেনিং বোল্ট -->
+    <path d="M25.5 12 L15 28 H24 L22.5 40 L35 24 H26 L25.5 12 Z" 
+          fill="#fff"/>
+    
+    <!-- লোগোর ওঠা-নামার অ্যানিমেশন (অপরিবর্তিত) -->
+    <animateTransform attributeName="transform" type="translate"
+                      values="20,18; 20,16; 20,18" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- ৬. টেক্সট (লেখা পরিবর্তিত) -->
+  <g text-anchor="start" font-family="Segoe UI, Inter, system-ui, Arial, sans-serif">
+    <!-- টাইটেল -->
+    <text x="90" y="40" font-size="18" font-weight="900"
+          fill="url(#frontGrad)" filter="url(#softGlow)" letter-spacing="1">
+     JOIN OUR MASSANGER GROUP 
+    </text>
+    <!-- সাবটাইটেল (অপরিবর্তিত) -->
+    <text x="90" y="62" font-size="13" font-weight="700"
+          fill="url(#frontGrad)">
+      JOIN FAST • 🌊 ʸᵒᵘʳ Sɪxᴜ 🎀
+    </text>
+  </g>
+
+  <!-- ৭. ডানের অ্যারো (অপরিবর্তিত অ্যানিমেশন) -->
+  <g transform="translate(400,46)" fill="url(#frontGrad)">
+    <polygon points="-10,-8 0,0 -10,8" opacity="0.9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="0,-8 10,0 0,8" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.2s" begin="0.2s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+</svg>
