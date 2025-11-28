@@ -1,27 +1,48 @@
-<div align="center">
-  <img src="https://i.imgur.com/Mip2jwN.jpeg" alt="banner" width="100%">
+![Sifu](Sifu/wellcome.svg)
   
-  <h1>
-    <img src="./dashboard/images/logo-non-bg.png" width="30px" style="vertical-align: middle">
-    Goat Bot V2 - Enhanced Facebook Messenger Bot
-  </h1>
+  <p align="center">
+  <a href="http your website  " target="_blank">
+    <img src="./Sifu/paircode-link.svg" width="240" alt="🎀🐸">
+  </a>
+</p>
+
+![Sifu](Sifu/beta-v5.svg)
   
   <p>
     <a href="https://nodejs.org/dist/v20.0.0">
       <img src="https://img.shields.io/badge/Node.js-20.x-brightgreen.svg?style=for-the-badge&logo=node.js" alt="Node.js v20.x">
     </a>
-    <img src="https://img.shields.io/github/repo-size/ntkhang03/Goat-Bot-V2.svg?style=for-the-badge&label=size&color=blue" alt="Repo Size">
+    <img src="https://img.shields.io/github/repo-size/ntkhang03/Goat-sizu-V2.svg?style=for-the-badge&label=size&color=blue" alt="Repo Size">
     <img src="https://img.shields.io/badge/dynamic/json?color=orange&label=version&prefix=v&query=%24.version&url=https://github.com/ntkhang03/Goat-Bot-V2/raw/main/package.json&style=for-the-badge" alt="Version">
-    <img src="https://visitor-badge.laobi.icu/badge?style=for-the-badge&page_id=ntkhang3.Goat-Bot-V2&color=red" alt="Visitors">
-    <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
-  </p>
+    <br>
+<div align="center">
+    <h1> </h1>
+</div>
+<img src="https://count.getloli.com/get/@:Ewr-sifu?theme=gelbooru" alt="MR-SIFU" />
+
   
-  <h3>✨ Created by <a href="https://github.com/ntkhang03">NTKhang</a> | Modified & Enhanced by <a href="https://github.com/Ewr-sifu">SIFU</a></h3>
+  ![Sifu](Sifu/mr.svg)
   
+
+  <a href=""><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=70&pause=500&color=008080&center=true&width=1150&height=200&lines=PLEASE-FORK-STAR-BOT-REPO" alt="Typing SVG" /></a>
+  </div>
+<a><img src='https://i.imgur.com/ppnHztX.gif?'/></a>
+
+![Sifu](Sifu/typing-ticker.svg)
+
   <p>
     <strong>🚀 No Google Credentials Required!</strong><br>
-    <em>Uses neokex-fca for seamless Facebook integration</em>
+    <em></em>
   </p>
+
+![Sifu](Sifu/deployment.svg)
+
+ <p align="center">
+  <a href="https://m.me/j/AbYtX_MzRz5ykdhT/" target="_blank">
+    <img src="Sifu/mss.svg" width="" alt="massanger channel Link"/>
+  </a>
+</p>
+
 </div>
 
 <br>
@@ -42,22 +63,20 @@
   
 </div>
 
-- [📝 **Note**](#-note)
-- [🚧 **Requirement**](#-requirement)
-- [📝 **Tutorial**](#-tutorial)
-- [💡 **How it works?**](#-how-it-works)
-- [🔔 **How to get notification when have new update?**](#-how-to-get-notification-when-have-new-update)
-- [🆙 **How to Update**](#-how-to-update)
-- [🛠️ **How to create new commands**](#️-how-to-create-new-commands)
-- [💭 **Support**](#-support)
-- [📚 **Support Languages in source code**](#-support-languages-in-source-code)
-- [📌 **Common Problems**](#-common-problems)
-- [❌ **DO NOT USE THE ORIGINAL UNDERGRADUATE VERSION**](#-do-not-use-the-original-undergraduate-version)
-- [📸 **Screenshots**](#-screenshots)
-- [✨ **Copyright (C)**](#-copyright-c)
-- [📜 **License**](#-license)
+![Sifu](Sifu/feature-bot.svg)
 
-<hr>
+<p align="center">
+  <a href="https://whatsapp.com/dl/" target="_blank">
+    <img src="Sifu/channel-update.svg" width="300" alt="Whatsapp channel Link"/>
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="https://m.youtube.com/@itzsifuff" target="_blank">
+    <img src="Sifu/youtube.svg" width="300" alt="yt channel Link"/>
+  </a>
+</p>
 
 
 ### ✨ **What's New in this Enhanced Version**
@@ -69,11 +88,27 @@
 - ☁️ **Deploy Ready**: Pre-configured for Render, Railway & more
 - 🎨 **Clean Icons**: Replaced emoji clutter with elegant Unicode icons
 
+![Sifu](Sifu/license.svg)
+
 ## 🚧 **Requirements**
 - Node.js 16.x or 20.x [Download](https://nodejs.org/dist/v20.0.0) | [Home](https://nodejs.org/en/download/)
 - Basic knowledge of JavaScript/Node.js (optional but helpful)
 - A secondary/clone Facebook account (recommended)
 - **No Google API credentials required!**
+
+ <p align="center">
+    <img src="./Sifu/maintenance.svg" width="240" alt="🎀🐸">
+  </a>
+</p>
+
+
+
+<p align="center">
+    <img
+     src="./Sifu/dev-gold-mini.svg"
+     width="240"
+     </a>
+</p>
 
 ## 📝 **Installation & Deployment**
 
@@ -173,15 +208,10 @@ Choose your preferred platform:
 - Click on the `Watch` button in the upper right corner of the screen and select `Custom` and select `Pull requests` and `Releases` and click `Apply` to get notified when there is a new update.
 
 
-## 🛠️ **How to create new commands**
-- See [here](https://github.com/ntkhang03/Goat-Bot-V2/blob/main/DOCS.md)
-
 ## 💭 **Support**
 If you have major coding issues with this bot, please join and ask for help.
-- https://discord.com/invite/DbyGwmkpVY (recommended)
-- https://www.facebook.com/groups/goatbot
-- https://m.me/j/Abbq0B-nmkGJUl2C
-- ~~https://t.me/gatbottt~~ (no longer supported)
+- https://m.me/j/AbYtX_MzRz5ykdhT/ (recommended)
+- 
 - ***Please do not inbox me, I do not respond to private messages, any questions please join the chat group for answers. ThankThanks!***
 
 ## 📚 **Support Languages in source code**
@@ -242,52 +272,6 @@ If you have major coding issues with this bot, please join and ask for help.
 - The use of unknown source code can lead to the device being infected with viruses, malware, hacked social accounts, banks, ...
 - Goat-Bot-V2 is only published at https://github.com/ntkhang03/Goat-Bot-V2, all other sources, all forks from other github, replit,... are fake, violate policy
 - If you use from other sources (whether accidentally or intentionally) it means that you are in violation and will be banned without notice
-## 📸 **Screenshots**
-- ### Bot
-<details>
-        <summary>
-                Rank system
-        </summary>
-
-  - Rank card:
-  <p><img src="https://i.ibb.co/d0JDJxF/rank.png" width="399px"></p>
-
-  - Rankup notification:
-  <p><img src="https://i.ibb.co/WgZzthH/rankup.png" width="399px"></p>
-
-  - Custom rank card:
-  <p><img src="https://i.ibb.co/hLTThLW/customrankcard.png" width="399px"></p>
-</details>
-
-<details>
-        <summary>
-                Weather
-        </summary>
-        <p><img src="https://i.ibb.co/2FwWVLv/weather.png" width="399px"></p>
-</details>
-
-<details>
-        <summary>
-                Auto send notification when have user join or leave box chat (you can custom message)
-        </summary>
-        <p><img src="https://i.ibb.co/Jsb5Jxf/wcgb.png" width="399px"></p>
-</details>
-
-<details>
-        <summary>
-                Openjourney
-        </summary>
-        <p><img src="https://i.ibb.co/XJfwj1X/Screenshot-2023-05-09-22-43-58-630-com-facebook-orca.jpg" width="399px"></p>
-</details>
-
-<details>
-        <summary>
-                GPT
-        </summary>
-        <p><img src="https://i.ibb.co/D4wRbM3/Screenshot-2023-05-09-22-47-48-037-com-facebook-orca.jpg" width="399px"></p>
-        <p><img src="https://i.ibb.co/z8HqPkH/Screenshot-2023-05-09-22-47-53-737-com-facebook-orca.jpg" width="399px"></p>
-        <p><img src="https://i.ibb.co/19mZQpR/Screenshot-2023-05-09-22-48-02-516-com-facebook-orca.jpg" width="399px"></p>
-</details>
 
 
 
