@@ -12,8 +12,8 @@ module.exports = {
   },
 
   onStart: async function({ message }) {
-    const text = "☠️ | Here is the updated fork:\n\nhttps:🍴🍴🍴\n\n" +
-                 "\nEnhanced overall performance\n\n" +
+    const text = "☠️ | Here is the updated fork:\n\nhttps://github.com/Ewr-Sifu/Goat-Sizu-V2.git\n\n" +
+                 "\nEnhanced overall performance\n\nYT VDO LINK: 🔗\n\n" +
                  "Keep supporting^_^";
     
     message.reply(text);
