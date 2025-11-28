@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner" width="100%">
+  <img src="https://i.imgur.com/Mip2jwN.jpeg" alt="banner" width="100%">
   
   <h1>
     <img src="./dashboard/images/logo-non-bg.png" width="30px" style="vertical-align: middle">
@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
   </p>
   
-  <h3>✨ Created by <a href="https://github.com/ntkhang03">NTKhang</a> | Modified & Enhanced by <a href="https://github.com/NeoKEX">NeoKEX</a></h3>
+  <h3>✨ Created by <a href="https://github.com/ntkhang03">NTKhang</a> | Modified & Enhanced by <a href="https://github.com/Ewr-sifu">SIFU</a></h3>
   
   <p>
     <strong>🚀 No Google Credentials Required!</strong><br>
@@ -59,14 +59,6 @@
 
 <hr>
 
-## 📝 **Important Notes**
-
-> ⚠️ **Account Safety First**
-> - This bot uses [neokex-fca](https://github.com/NeoKEX/neokex-fca) (Facebook Chat API)
-> - **No Google API credentials needed** - Simple setup with just your Facebook account
-> - Using unofficial APIs may risk account restrictions
-> - **Recommended:** Use a secondary/clone Facebook account
-> - The developers are not responsible for any account issues
 
 ### ✨ **What's New in this Enhanced Version**
 - 🎖️ **Advanced Role System**: 5 permission levels (0-4) for granular access control
@@ -103,14 +95,11 @@ Choose your preferred platform:
 - **[Replit](DEPLOY.md#replit)** - Quick setup, perfect for testing
 - **[VPS/Server](DEPLOY.md#vpsserver)** - Full control, use PM2 for process management
 
-📘 **Detailed deployment guide**: See [DEPLOY.md](DEPLOY.md)
 
 ### 📺 Video Tutorials
 - For mobile phone: https://www.youtube.com/watch?v=grVeZ76HlgA
 - For VPS/Windows: https://www.youtube.com/watch?v=uCbSYNQNEwY
   
-Summary instructions:
-- See [here](https://github.com/ntkhang03/Goat-Bot-V2/blob/main/STEP_INSTALL.md)
 
 
 
@@ -183,10 +172,6 @@ Summary instructions:
 ## 🔔 **How to get notification when have new update?**
 - Click on the `Watch` button in the upper right corner of the screen and select `Custom` and select `Pull requests` and `Releases` and click `Apply` to get notified when there is a new update.
 
-## 🆙 **How to Update**
-Tutorial has been uploaded on YouTube
-- on phone/repl: https://youtu.be/grVeZ76HlgA?t=1342
-- on vps/computer: https://youtu.be/uCbSYNQNEwY?t=508
 
 ## 🛠️ **How to create new commands**
 - See [here](https://github.com/ntkhang03/Goat-Bot-V2/blob/main/DOCS.md)
